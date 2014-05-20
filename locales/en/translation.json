@@ -4,6 +4,11 @@
   "cancel": "Cancel",
   "help": "Help",
   "url": "URL (.SWF)*",
+  "fileType": {
+    "label": "File Type",
+    "movie": "Movie",
+    "application": "Application"
+  },
   "validation": {
     "required": "__fieldName__ is a required field.",
     "valid_url": "__fieldName__ must contain a valid URL."
