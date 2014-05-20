@@ -1,0 +1,11 @@
+{
+  "settings": "Flash Settings",
+  "save": "Save",
+  "cancel": "Cancel",
+  "help": "Help",
+  "url": "URL (.SWF)*",
+  "validation": {
+    "required": "__fieldName__ is a required field.",
+    "valid_url": "__fieldName__ must contain a valid URL."
+  }
+}
