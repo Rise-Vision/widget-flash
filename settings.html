@@ -67,6 +67,12 @@
       <div class="row">
         <div class="col-md-4 col-sm-5 col-xs-9">
           <label for="fileType" data-i18n="fileType.label"></label>
+          <button type="button"
+                  class="btn btn-link btn-help"
+                  data-toggle="popover" data-placement="right"
+                  data-i18n="[data-content]fileType.tooltip">
+            <span class="glyphicons circle_question_mark"></span>
+          </button>
           <select id="fileType" name="fileType" class="form-control">
             <option value="movie" data-i18n="fileType.movie" selected="selected"></option>
             <option value="application" data-i18n="fileType.application"></option>

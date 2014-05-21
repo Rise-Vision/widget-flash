@@ -144,8 +144,8 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
           $(".widget-wrapper").i18n().show();
           $(".form-control").selectpicker();
 
-          //TODO: Set tooltips only after i18n has shown
-
+          // Set tooltips only after i18n has shown
+          $("label[for='fileType'] + button").popover({trigger:'click'});
 
           //Set buttons to be sticky only after wrapper is visible.
           $(".sticky-buttons").sticky({
