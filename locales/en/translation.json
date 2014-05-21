@@ -8,7 +8,7 @@
     "label": "File Type",
     "movie": "Movie",
     "application": "Application",
-    "tooltip": "Select 'Movies' for single/multiple Flash files that only play on the frames of the root stage timeline. Select 'Application' for Flash files that only initialize on the root stage timeline and play via application code."
+    "tooltip": "Select \"Movies\" for single/multiple flash movies or \"Application\" for flash applications."
   },
   "validation": {
     "required": "__fieldName__ is a required field.",
