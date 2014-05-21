@@ -48,9 +48,7 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
   }
 
   function _getParams(){
-    var params = "";
-
-    //TODO: Define necessary params
+    var params = "&up_fileType=" + $("#fileType").val();
 
     return params;
   }
@@ -131,13 +129,11 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
         if (result) {
           result = JSON.parse(result);
 
-          //TODO: Apply any neccesary values from prefs
+          $("#fileType").val(_prefs.getString("fileType"));
 
           //Additional params
           $("#url").val(result["url"]);
 
-        } else {
-          //TODO: possibly initialize any input elements with defaults
         }
 
         i18n.init({ fallbackLng: "en" }, function(t) {
