@@ -13,5 +13,6 @@
   "validation": {
     "required": "__fieldName__ is a required field.",
     "valid_url": "__fieldName__ must contain a valid URL."
-  }
+  },
+  "no-flash": "You do not appear to have Adobe Flash Player installed in your browser."
 }
