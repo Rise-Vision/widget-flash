@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flash Settings</title>
+
+  <link rel="stylesheet"
+        href="//s3.amazonaws.com/rise-common-test/styles/glyphicons/glyphicons.min.css">
+  <link rel="stylesheet"
+        href="//s3.amazonaws.com/rise-common-test/styles/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="//s3.amazonaws.com/rise-common-test/styles/bootstrap-select/bootstrap-select.min.css">
+  <link rel="stylesheet"
+        href="//s3.amazonaws.com/rise-common-test/styles/bootstrap-form-helper/bootstrap-formhelpers.min.css" />
+  <link rel="stylesheet"
+        href="//s3.amazonaws.com/rise-common-test/styles/rise/css/rise.min.css">
+
+  <style type="text/css">
+    /* rise.min.css from rise-common-test is applying a background colour,
+       overriding here */
+    body,html {
+      background-color: transparent;
+    }
+    .widget-wrapper {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="widget-overlay"></div>
+  <div class="widget-wrapper container modal-content">
+    <div class="modal-header">
+      <h1 id="settings-title" data-i18n="[prepend]settings">
+        <button id="settings-close" type="button" class="close"
+                aria-hidden="true">
+          <i class="glyphicons remove_2"></i>
+        </button>
+      </h1>
+      <div class="sticky-wrapper">
+        <div class="btn-toolbar sticky-buttons">
+          <button id="save" class="btn btn-primary" type="button">
+            <span data-i18n="save"></span>
+            <i class="glyphicons white ok_2 icon-right"></i>
+          </button>
+          <button id="cancel" class="btn btn-primary" type="button">
+            <span data-i18n="cancel"></span>
+            <i class="glyphicons white remove_2 icon-right"></i>
+          </button>
+          <button id="help" class="btn btn-primary" type="button">
+            <span data-i18n="help"></span>
+            <i class="glyphicons white circle_question_mark icon-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="settings-alert" class="alert alert-danger"></div>
+    <form role="form">
+      <div class="row">
+        <div class="col-sm-11 col-md-10">
+          <div class="form-group">
+            <label for="url" data-i18n="url"></label>
+            <input id="url" name="url" type="text" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-5 col-xs-9">
+          <label for="fileType" data-i18n="fileType.label"></label>
+          <button type="button"
+                  class="btn btn-link btn-help"
+                  data-toggle="popover" data-placement="right"
+                  data-i18n="[data-content]fileType.tooltip">
+            <span class="glyphicons circle_question_mark"></span>
+          </button>
+          <select id="fileType" name="fileType" class="form-control">
+            <option value="movie" data-i18n="fileType.movie" selected="selected"></option>
+            <option value="application" data-i18n="fileType.application"></option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//rvashow2.appspot.com/gadgets/gadgets.min.js"></script>
+
+  <script src="//s3.amazonaws.com/rise-common-test/scripts/bootstrap/bootstrap.min.js"></script>
+  <script src="//s3.amazonaws.com/rise-common-test/scripts/bootstrap-select/bootstrap-select.min.js"></script>
+  <script src="//s3.amazonaws.com/rise-common-test/scripts/i18next/i18next.js"></script>
+  <script src="//s3.amazonaws.com/rise-common-test/scripts/sticky/jquery.sticky.min.js"></script>
+  <script src="//s3.amazonaws.com/rise-common-test/scripts/rise/common.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>
