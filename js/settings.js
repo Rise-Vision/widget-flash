@@ -5,7 +5,8 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
   "use strict";
 
   // private variables
-  var _prefs = null;
+  var _prefs = null,
+      _el;
 
   // private functions
   function _bind(){
@@ -24,15 +25,24 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
     });
   }
 
+  function _cache(){
+    _el = {
+      wrapperCtn:           $(".widget-wrapper"),
+      urlInp:               $("#url"),
+      alertCtn:             $("#settings-alert"),
+      fileTypeSel:          $("#fileType")
+    }
+  }
+
   function _getValidationsMap(){
     return {
       "required": {
-        fn: RiseVision.Common.Validation.required,
+        fn: RiseVision.Common.Validation.isValidRequired,
         localize: "validation.required",
         conditional: null
       },
       "url": {
-        fn: RiseVision.Common.Validation.url,
+        fn: RiseVision.Common.Validation.isValidURL,
         localize: "validation.valid_url",
         conditional: null
       }
@@ -42,13 +52,13 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
   function _getAdditionalParams(){
     var additionalParams = {};
 
-    additionalParams["url"] = $("#url").val();
+    additionalParams["url"] = _el.urlInp.val();
 
     return additionalParams;
   }
 
   function _getParams(){
-    var params = "&up_fileType=" + $("#fileType").val();
+    var params = "&up_fileType=" + _el.fileTypeSel.val();
 
     return params;
   }
@@ -58,8 +68,8 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
 
     // validate
     if(!_validate()){
-      $("#settings-alert").show();
-      $(".widget-wrapper").scrollTop(0);
+      _el.alertCtn.show();
+      _el.wrapperCtn.scrollTop(0);
     } else {
       //construct settings object
       settings = {
@@ -80,7 +90,7 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
         ],
         passed = true;
 
-    $("#settings-alert").empty().hide();
+    _el.alertCtn.empty().hide();
 
     for(var i = 0; i < itemsToValidate.length; i++){
       if(!_validateItem(itemsToValidate[i])){
@@ -117,9 +127,10 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
   return {
     init: function(){
 
+      _cache();
       _bind();
 
-      $("#settings-alert").hide();
+      _el.alertCtn.hide();
 
       //Request additional parameters from the Viewer.
       gadgets.rpc.call("", "rscmd_getAdditionalParams", function(result) {
@@ -129,27 +140,19 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
         if (result) {
           result = JSON.parse(result);
 
-          $("#fileType").val(_prefs.getString("fileType"));
+          _el.fileTypeSel.val(_prefs.getString("fileType"));
 
           //Additional params
-          $("#url").val(result["url"]);
+          _el.urlInp.val(result["url"]);
 
         }
 
         i18n.init({ fallbackLng: "en" }, function(t) {
-          $(".widget-wrapper").i18n().show();
+          _el.wrapperCtn.i18n().show();
           $(".form-control").selectpicker();
 
           // Set tooltips only after i18n has shown
           $("label[for='fileType'] + button").popover({trigger:'click'});
-
-          //Set buttons to be sticky only after wrapper is visible.
-          $(".sticky-buttons").sticky({
-              container : $(".widget-wrapper"),
-              topSpacing : 41,	//top margin + border of wrapper
-              getWidthFrom : $(".widget-wrapper")
-          });
-
         });
       });
     }
