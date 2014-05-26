@@ -25,31 +25,37 @@
     .widget-wrapper {
       display: none;
     }
+    .btn-toolbar-wrapper .btn-toolbar {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="widget-overlay"></div>
   <div class="widget-wrapper container modal-content">
     <div class="modal-header">
-      <h1 id="settings-title" data-i18n="[prepend]settings">
+      <h2 id="settings-title" data-i18n="[prepend]settings">
         <button id="settings-close" type="button" class="close"
                 aria-hidden="true">
           <i class="glyphicons remove_2"></i>
         </button>
-      </h1>
-      <div class="btn-toolbar">
-        <button id="save" class="btn btn-primary" type="button">
-          <span data-i18n="save"></span>
-          <i class="glyphicons white ok_2 icon-right"></i>
-        </button>
-        <button id="cancel" class="btn btn-primary" type="button">
-          <span data-i18n="cancel"></span>
-          <i class="glyphicons white remove_2 icon-right"></i>
-        </button>
-        <button id="help" class="btn btn-primary" type="button">
-          <span data-i18n="help"></span>
-          <i class="glyphicons white circle_question_mark icon-right"></i>
-        </button>
+      </h2>
+      <div class="btn-toolbar-wrapper">
+        <div class="btn-toolbar">
+          <button id="save" class="btn btn-primary" type="button">
+            <span data-i18n="save"></span>
+            <i class="glyphicons white ok_2 icon-right"></i>
+          </button>
+          <button id="cancel" class="btn btn-primary" type="button">
+            <span data-i18n="cancel"></span>
+            <i class="glyphicons white remove_2 icon-right"></i>
+          </button>
+          <button id="help" class="btn btn-primary" type="button">
+            <span data-i18n="help"></span>
+            <i class="glyphicons white circle_question_mark icon-right"></i>
+          </button>
+        </div>
       </div>
     </div>
     <div id="settings-alert" class="alert alert-danger"></div>
