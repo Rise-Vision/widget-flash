@@ -1,0 +1,18 @@
+{
+  "settings": "Flash Settings",
+  "save": "Save",
+  "cancel": "Cancel",
+  "help": "Help",
+  "url": "URL (.SWF)*",
+  "fileType": {
+    "label": "File Type",
+    "movie": "Movie",
+    "application": "Application",
+    "tooltip": "Select \"Movies\" for single/multiple Flash movies or \"Application\" for Flash applications."
+  },
+  "validation": {
+    "required": "__fieldName__ is a required field.",
+    "valid_url": "__fieldName__ must contain a valid URL."
+  },
+  "no-flash": "You do not appear to have Adobe Flash Player installed in your browser."
+}
