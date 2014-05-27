@@ -1,0 +1,44 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: node-gettext\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "settings"
+msgstr "Flash Settings"
+
+msgid "save"
+msgstr "Save"
+
+msgid "cancel"
+msgstr "Cancel"
+
+msgid "help"
+msgstr "Help"
+
+msgid "url"
+msgstr "URL (.SWF)*"
+
+msgid "fileType##label"
+msgstr "File Type"
+
+msgid "fileType##movie"
+msgstr "Movie"
+
+msgid "fileType##application"
+msgstr "Application"
+
+msgid "fileType##tooltip"
+msgstr "Select \"Movies\" for single/multiple Flash movies or \"Application\" for Flash applications."
+
+msgid "validation##required"
+msgstr "__fieldName__ is a required field."
+
+msgid "no-flash"
+msgstr "You do not appear to have Adobe Flash Player installed in your browser."
+
+msgctxt "_url"
+msgid "validation##valid_url"
+msgstr "__fieldName__ must contain a valid URL."
