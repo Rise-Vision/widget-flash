@@ -1,19 +1,13 @@
 var RiseVision = RiseVision || {};
 RiseVision.Flash = {};
 
-RiseVision.Flash.Controller = (function(gadgets) {
+RiseVision.Flash.Controller = (function(gadgets, swfobject) {
   "use strict";
 
   // private variables
-  var _prefs = null, _url = "", _el;
+  var _prefs = null, _url = "";
 
   // private functions
-  function _cache(){
-    _el = {
-      flashCtn:   document.getElementById("flashContent")
-    }
-  }
-
   function _checkSWFState(swf){
     if(swf.IsPlaying()){
       setTimeout(function(){
@@ -118,8 +112,6 @@ RiseVision.Flash.Controller = (function(gadgets) {
     init: function(){
       _prefs = new gadgets.Prefs();
 
-      _cache();
-
       var id = _prefs.getString("id"),
         backgroundColor = _prefs.getString("backgroundColor");
 
@@ -143,7 +135,7 @@ RiseVision.Flash.Controller = (function(gadgets) {
     }
   }
 
-})(gadgets);
+})(gadgets,swfobject);
 
 //Add Analytics code.
 var _gaq = _gaq || [];
