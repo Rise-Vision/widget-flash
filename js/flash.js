@@ -5,13 +5,48 @@ RiseVision.Flash.Controller = (function(gadgets) {
   "use strict";
 
   // private variables
-  var _prefs = null, _url = "", _intervalID = null, _el;
+  var _prefs = null, _url = "", _el;
 
   // private functions
   function _cache(){
     _el = {
       flashCtn:   document.getElementById("flashContent")
     }
+  }
+
+  function _checkSWFState(swf){
+    if(swf.IsPlaying()){
+      setTimeout(function(){
+        _checkSWFState(swf);
+      }, 1000);
+    } else {
+      if(swf.TotalFrames() <= 1){
+        // The SWF was mistakenly set to be a Movie, it is an Application
+      } else {
+        // SWF Movie has played to its final frame
+        _doneEvent();
+      }
+    }
+  }
+
+  function _checkSWFStatus(swf){
+    if(swf.PercentLoaded() !== 100){
+      // Keep polling SWF status to know when it has fully loaded
+      setTimeout(function (){
+        _checkSWFStatus(swf);
+      }, 50);
+    } else {
+      // Only poll SWF state if user defined FileType as "Movie"
+      if (_prefs.getString("fileType") === "movie") {
+        setTimeout(function() {
+          _checkSWFState(swf);
+        }, 1000);
+      }
+    }
+  }
+
+  function _doneEvent() {
+    gadgets.rpc.call("", "rsevent_done", null, _prefs.getString("id"));
   }
 
   function _embed(){
@@ -28,7 +63,14 @@ RiseVision.Flash.Controller = (function(gadgets) {
 
     function onEmbed(e){
       if(e.success){
-        //TODO: configure an interval check based on type of Flash SWF
+        //Ensure SWF is ready to be polled
+        setTimeout(function checkSWFExistence(){
+          if(typeof e.ref.PercentLoaded() !== "undefined"){
+            _checkSWFStatus(e.ref);
+          } else {
+            checkSWFExistence();
+          }
+        }, 10);
       }
     }
 
@@ -56,7 +98,6 @@ RiseVision.Flash.Controller = (function(gadgets) {
   }
 
   function _onPause(){
-
   }
 
   function _onPlay(){
@@ -64,7 +105,6 @@ RiseVision.Flash.Controller = (function(gadgets) {
   }
 
   function _onStop(){
-
   }
 
   function _readyEvent(){
