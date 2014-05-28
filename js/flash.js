@@ -56,7 +56,8 @@ RiseVision.Flash.Controller = (function(gadgets, swfobject) {
           allowscriptaccess: "sameDomain",
           allownetworking: "internal"
         },
-        attributes = {};
+        attributes = {},
+        c = document.getElementById(FLASH_CONTENT_ID), d;
 
     function onEmbed(e){
       if(e.success){
@@ -69,6 +70,16 @@ RiseVision.Flash.Controller = (function(gadgets, swfobject) {
           }
         }, 10);
       }
+    }
+
+    /* check if SWF has been removed, if this is the case, create a
+     new flash/alternative content div
+     */
+    if (!c) {
+      d = document.createElement("div");
+      d.setAttribute("id", FLASH_CONTENT_ID);
+      d.innerHTML = "<p data-i18n='no-flash'></p>";
+      document.getElementById("flashContainer").appendChild(d);
     }
 
     swfobject.embedSWF(_url, FLASH_CONTENT_ID, _prefs.getInt("rsW"),
