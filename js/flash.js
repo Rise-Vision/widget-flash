@@ -4,6 +4,9 @@ RiseVision.Flash = {};
 RiseVision.Flash.Controller = (function(gadgets, swfobject) {
   "use strict";
 
+  // constants
+  var FLASH_CONTENT_ID = "flashContent";
+
   // private variables
   var _prefs = null, _url = "";
 
@@ -68,7 +71,7 @@ RiseVision.Flash.Controller = (function(gadgets, swfobject) {
       }
     }
 
-    swfobject.embedSWF(_url, "flashContent", _prefs.getInt("rsW"),
+    swfobject.embedSWF(_url, FLASH_CONTENT_ID, _prefs.getInt("rsW"),
       _prefs.getInt("rsH"), "9.0.280","expressInstall.swf", flashvars,
       params, attributes, onEmbed);
   }
@@ -92,6 +95,7 @@ RiseVision.Flash.Controller = (function(gadgets, swfobject) {
   }
 
   function _onPause(){
+    swfobject.removeSWF(FLASH_CONTENT_ID);
   }
 
   function _onPlay(){
@@ -99,6 +103,7 @@ RiseVision.Flash.Controller = (function(gadgets, swfobject) {
   }
 
   function _onStop(){
+    swfobject.removeSWF(FLASH_CONTENT_ID);
   }
 
   function _readyEvent(){
@@ -119,7 +124,6 @@ RiseVision.Flash.Controller = (function(gadgets, swfobject) {
       if (backgroundColor != "") {
         document.body.style.background = backgroundColor;
       }
-
 
       if (id) {
         // Register rpc event handlers
