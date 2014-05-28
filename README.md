@@ -1,4 +1,4 @@
-# Web Page Widget
+# Flash Widget
 **Copyright © 2014 - Rise Vision Incorporated.**
 
 *Use of this software is governed by the GPLv3 license (available in the LICENSE file).*
