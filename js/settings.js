@@ -75,7 +75,7 @@ RiseVision.Flash.Settings = (function($,gadgets, i18n) {
       settings = {
         "params" : _getParams(),
         "additionalParams" : JSON.stringify(_getAdditionalParams())
-      }
+      };
 
       gadgets.rpc.call("", "rscmd_saveSettings", null, settings);
     }
