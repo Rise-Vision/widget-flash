@@ -28,13 +28,13 @@ msgid "url"
 msgstr "url"
 
 msgid "fileType##label"
-msgstr "bestandType##label"
+msgstr "bestand type"
 
 msgid "fileType##movie"
-msgstr "bestandType##film"
+msgstr "film"
 
 msgid "fileType##application"
-msgstr "bestandType##applicatie"
+msgstr "applicatie"
 
 msgid "fileType##tooltip"
 msgstr "Selecteer Film voor Flash Film of Aanvraag voor Flash-toepassing"

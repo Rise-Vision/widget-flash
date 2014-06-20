@@ -5,9 +5,9 @@
     "help": "help",
     "url": "url",
     "fileType": {
-        "label": "bestandType##label",
-        "movie": "bestandType##film",
-        "application": "bestandType##applicatie",
+        "label": "bestand type",
+        "movie": "film",
+        "application": "applicatie",
         "tooltip": "Selecteer Film voor Flash Film of Aanvraag voor Flash-toepassing"
     },
     "validation": {

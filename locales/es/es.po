@@ -28,13 +28,13 @@ msgid "url"
 msgstr "url"
 
 msgid "fileType##label"
-msgstr "tipo de archivo##etiqueta"
+msgstr "tipo de archivo"
 
 msgid "fileType##movie"
-msgstr "tipo de archivo##película"
+msgstr "película"
 
 msgid "fileType##application"
-msgstr "tipo de archivo##aplicación"
+msgstr "aplicación"
 
 msgid "fileType##tooltip"
 msgstr ""

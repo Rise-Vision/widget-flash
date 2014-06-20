@@ -5,9 +5,9 @@
     "help": "ayuda",
     "url": "url",
     "fileType": {
-        "label": "tipo de archivo##etiqueta",
-        "movie": "tipo de archivo##película",
-        "application": "tipo de archivo##aplicación",
+        "label": "tipo de archivo",
+        "movie": "película",
+        "application": "aplicación",
         "tooltip": "Seleccione Película para Flash Película o Solicitud de aplicación Flash"
     },
     "validation": {

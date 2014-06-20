@@ -28,13 +28,13 @@ msgid "url"
 msgstr "url"
 
 msgid "fileType##label"
-msgstr "Tipoficheiro##etiqueta"
+msgstr "Tipo ficheiro"
 
 msgid "fileType##movie"
-msgstr "Tipoficheiro##filme"
+msgstr "filme"
 
 msgid "fileType##application"
-msgstr "Tipoficheiro##aplicação"
+msgstr "aplicação"
 
 msgid "fileType##tooltip"
 msgstr ""
@@ -42,7 +42,7 @@ msgstr ""
 "aplicações com Flash."
 
 msgid "validation##required"
-msgstr "O _Nomecampo_ é um campo obrigatório."
+msgstr "__fieldName__ é um campo obrigatório."
 
 msgid "no-flash"
 msgstr "Parece que não tem o Adobe Flash Player instalado no seu navegador."
