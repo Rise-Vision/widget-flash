@@ -1,0 +1,18 @@
+{
+    "settings": "definições",
+    "save": "guardar",
+    "cancel": "cancelar",
+    "help": "ajuda",
+    "url": "url",
+    "fileType": {
+        "label": "Tipoficheiro##etiqueta",
+        "movie": "Tipoficheiro##filme",
+        "application": "Tipoficheiro##aplicação",
+        "tooltip": "Selecione Filme para um único/vários filmes com Flash ou Aplicação para aplicações com Flash."
+    },
+    "validation": {
+        "required": "O _Nomecampo_ é um campo obrigatório.",
+        "valid_url": "__fieldName__ deve conter uma URL válida"
+    },
+    "no-flash": "Parece que não tem o Adobe Flash Player instalado no seu navegador."
+}

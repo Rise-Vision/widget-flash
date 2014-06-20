@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: node-gettext\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"X-Generator: Poedit 1.6.4\n"
+
+msgid "settings"
+msgstr "instellingen"
+
+msgid "save"
+msgstr "opslaan"
+
+msgid "cancel"
+msgstr "annuleren"
+
+msgid "help"
+msgstr "help"
+
+msgid "url"
+msgstr "url"
+
+msgid "fileType##label"
+msgstr "bestandType##label"
+
+msgid "fileType##movie"
+msgstr "bestandType##film"
+
+msgid "fileType##application"
+msgstr "bestandType##applicatie"
+
+msgid "fileType##tooltip"
+msgstr "Selecteer Film voor Flash Film of Aanvraag voor Flash-toepassing"
+
+msgid "validation##required"
+msgstr "__fieldName__ is een verplicht veld"
+
+msgid "no-flash"
+msgstr "Je hoeft niet te hebben Adobe Flash Player geïnstalleerd in uw browser"
+
+msgctxt "_url"
+msgid "validation##valid_url"
+msgstr "__fieldName__ URL is ongeldig."

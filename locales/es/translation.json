@@ -1,0 +1,18 @@
+{
+    "settings": "ajustes",
+    "save": "guardar",
+    "cancel": "cancelar",
+    "help": "ayuda",
+    "url": "url",
+    "fileType": {
+        "label": "tipo de archivo##etiqueta",
+        "movie": "tipo de archivo##película",
+        "application": "tipo de archivo##aplicación",
+        "tooltip": "Seleccione Película para Flash Película o Solicitud de aplicación Flash"
+    },
+    "validation": {
+        "required": "__fieldName__ es un campo obligatorio",
+        "valid_url": "__fieldName__ URL no válida"
+    },
+    "no-flash": "No parecen tener Adobe Flash Player instalado en su navegador."
+}
