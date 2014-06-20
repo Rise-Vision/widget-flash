@@ -1,0 +1,18 @@
+{
+    "settings": "instellingen",
+    "save": "opslaan",
+    "cancel": "annuleren",
+    "help": "help",
+    "url": "url",
+    "fileType": {
+        "label": "bestand type",
+        "movie": "film",
+        "application": "applicatie",
+        "tooltip": "Selecteer Film voor Flash Film of Aanvraag voor Flash-toepassing"
+    },
+    "validation": {
+        "required": "__fieldName__ is een verplicht veld",
+        "valid_url": "__fieldName__ URL is ongeldig."
+    },
+    "no-flash": "Je hoeft niet te hebben Adobe Flash Player geïnstalleerd in uw browser"
+}
