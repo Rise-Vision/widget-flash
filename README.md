@@ -10,6 +10,25 @@ Flash Widget works in conjunction with [Rise Vision](http://www.risevision.com),
 
 At this time Chrome is the only browser that this project and Rise Vision supports.
 
+## Development
+
+### Dependencies
+* [Git](http://git-scm.com/) - Git is a free and open source distributed version control system that is used to manage our source code on Github.
+
+### Local Development Environment Setup and Installation
+To make changes to the Widget, you'll first need to install [Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+The Widget can now be installed by executing the following command in Terminal:
+```
+git clone https://github.com/Rise-Vision/widget-flash.git
+```
+
+### Deployment
+Once you are satisifed with your changes, deploy them to your server. In the Rise Vision Platform, you can then add your custom Widget via the *Gadgets* tab. Give your Widget a name, select a *Type* of *Widget*, paste the link to the `flash.html` file in the *URL* field, and the link to the `settings.html` file in the *Custom UI URL* field:
+
+![Add a Widget](https://cloud.githubusercontent.com/assets/1190420/5113377/2f2d9240-6ffd-11e4-98ad-a484c1fa7183.png)
+
+
 ## Submitting Issues
 If you encounter problems or find defects we really want to hear about them. If you could take the time to add them as issues to this Repository it would be most appreciated. When reporting issues please use the following format where applicable:
 
