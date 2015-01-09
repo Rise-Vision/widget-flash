@@ -1,3 +1,7 @@
+# Flash Widget
+
+**UPDATE:** This widget will no longer be supported. 
+
 ## Introduction
 
 The Flash Widget allows you to display one Flash file in a Presentation. The Flash file must be accessible from a URL and only the SWF file format is supported.
@@ -45,9 +49,6 @@ What you expected to happen.
 **Actual Results**
 
 What actually happened. (screenshots / video captures always help)
-
-## Contributing
-All contributions are greatly appreciated and welcome! If you would first like to sound out your contribution ideas please post your thoughts to our [community](http://community.risevision.com), otherwise submit a pull request and we will do our best to incorporate it
 
 ### Languages
 If you would like translate the user interface for this product to another language please complete the following:
