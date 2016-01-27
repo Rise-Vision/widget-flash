@@ -57,8 +57,6 @@ RiseVision.Flash.Controller = (function(gadgets, swfobject) {
           allownetworking: "internal"
         },
         attributes = {},
-        //Generate a random number to append to the URL to avoid caching
-        urlValue = _url + "?dummyVar=" + Math.ceil(Math.random() * 100),
         c = document.getElementById(FLASH_CONTENT_ID), d;
 
     function onEmbed(e){
@@ -84,7 +82,7 @@ RiseVision.Flash.Controller = (function(gadgets, swfobject) {
       document.getElementById("flashContainer").appendChild(d);
     }
 
-    swfobject.embedSWF(urlValue, FLASH_CONTENT_ID, _prefs.getInt("rsW"),
+    swfobject.embedSWF(_url, FLASH_CONTENT_ID, _prefs.getInt("rsW"),
       _prefs.getInt("rsH"), "9.0.280","expressInstall.swf", flashvars,
       params, attributes, onEmbed);
   }
